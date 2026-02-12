@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/MIT-License?style=flat-square)
+
 # Atividades práticas da disciplina de Programação Orientada a Objeto
 
 > Repositório com as atividades práticas da disciplina de Porgramação Orientada a Objetos

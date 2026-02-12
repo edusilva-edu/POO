@@ -14,6 +14,12 @@ git config --global user.email "email@email.com"
 
 ### Criando Personal Access Token (PAT) no GitHub
 
+Para ter acesso aos reposítórios e poder editá-los, é preciso de uma senha, chamada de ersonal Access Token. Eles são criados para que exista segurança e que só os propriedarios possam ter acesso de edição. Seguindo os passos seguintes é simples criar um Token.
+
+1. Na página inicial do GitHub, clique na imagem do seu perfil;
+
+1. Entre em 
+
 ### Salvar em cache as credenciais do PAT
 
 ## Qual a diferença entre git merge e git rebase?

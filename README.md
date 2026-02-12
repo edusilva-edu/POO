@@ -1,4 +1,5 @@
-![Static Badge](https://img.shields.io/badge/MIT-License?style=flat-square)
+![GitHub License](https://img.shields.io/github/license/edusilva-edu/POO)
+
 
 # Atividades práticas da disciplina de Programação Orientada a Objeto
 

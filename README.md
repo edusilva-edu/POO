@@ -11,4 +11,5 @@
 
 ## Aulas
 
-- [Aula 01](aula1) - Introdução à linguagem Java
+- [Aula 01](aula1) - Revisão Github 
+- [Aula 02](aula2) - Revisão à Linguagem Java

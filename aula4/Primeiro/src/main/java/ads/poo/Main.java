@@ -9,8 +9,10 @@ public class Main {
             IO.println("i = " + i);
         }
 
+        // TODO finalizar
         int contador = 10;
         IO.println(contador++);
+        // FIXME ajeitar
         IO.println(++contador);
 
     }

@@ -3,15 +3,32 @@ package ads.poo;
 public class Main {
     static void main(String[] args){
 
-        Lampada a = new Lampada();
+//        Lampada a = new Lampada();
+//
+//        IO.println(a.isLigada());
+//        IO.println(a.ligarDesligar());
+//
+//        Lampada b = new Lampada();
+//
+//        IO.println(a.isLigada());
+//        IO.println(b.isLigada());
 
-        IO.println(a.isLigada());
-        IO.println(a.ligarDesligar());
+        Caneta bic = new Caneta();
 
-        Lampada b = new Lampada();
+        bic.setCor("azul"); // Atribunido a cor azul
 
-        IO.println(a.isLigada());
-        IO.println(b.isLigada());
+        bic.setNivelTinta(0.02); // Atribunido o nivel de tinta
 
+        String cor = bic.getCor();
+
+        bic.abreFecha(); // Abrindo tampa
+
+        double nivelTinta = bic.getNivelTinta();
+
+        IO.println(bic.getNivelTinta());
+
+        IO.println(bic.desenhar(0, 0, 0, 2));
+
+        IO.println(bic.getNivelTinta());
     }
 }

@@ -26,17 +26,17 @@ public class App {
         var contaADepositar = Integer.parseInt(IO.readln("Conta para depositar: "));
 
         for (Conta numero : contas){
-            if (numero.getNumero() == contaADepositar){
+            if (numero.getNumero() == contaADepositar) {
                 var saldoAnterior = numero.getSaldo();
                 var valorDeposito = Integer.parseInt(IO.readln("Quanto quer depositar: "));
                 numero.depositar(valorDeposito);
-                if (saldoAnterior == numero.getSaldo()){
+                if (saldoAnterior == numero.getSaldo()) {
                     IO.println("Não foi possível depositar");
                 }
                 return;
             }
-            IO.println("Conta inexistente.");
         }
+        IO.println("Conta inexistente.");
     }
 
     void sacarEmConta(){

@@ -1,11 +1,11 @@
 package ads.poo;
 
 public class Conta {
-    private int numero;
+    private String numero;
     private String nome;
     private int saldo;
 
-    public Conta(int numero, String nome, int saldo) {
+    public Conta(String numero, String nome, int saldo) {
         this.numero = numero;
         this.nome = nome;
         this.saldo = (saldo > 0) ? saldo : 0;

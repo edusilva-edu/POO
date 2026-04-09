@@ -6,7 +6,7 @@ public class App {
     private ArrayList<Conta> contas;
 
     void cadastrar(){
-        var numero = Integer.parseInt(IO.readln("Número da conta: "));
+        var numero = IO.readln("Número da conta: ");
         var nome = IO.readln("Nome do titular: ");
         var saldo = Integer.parseInt(IO.readln("Saldo: "));
 

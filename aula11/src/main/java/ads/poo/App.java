@@ -14,29 +14,39 @@ public class App {
         var isbn = IO.readln("ISBN: ");
         var autor = IO.readln("Autor: ");
 
-        var novoLivro = new Livro(ano, titulo, isbn, autor);
+        var novoLivro = new Livro(titulo, ano, isbn, autor);
 
         this.livros.put(isbn, novoLivro);
     }
 
     void listarTodosLivros() {
-        for (String titulo : livros.keySet()) {
-            IO.println("Livro: " + titulo);
-        }
+        IO.println("Livros cadastrados:");
+        IO.println("-------------------");
+    for (Livro livro : livros.values()) {
+        IO.println("Título: " + livro.getTitulo());
+        IO.println("Autor: " + livro.getAutor());
+        IO.println("Ano: " + livro.getAno());
+        IO.println("ISBN: " + livro.getIsbn());
+        IO.println("-------------------");
     }
+}
 
     void listarLivrosPorAno() {
-        String pesquisarAno = IO.readln("Pesquisar pelo ano: ");
+        String pesquisaAno = IO.readln("Pesquisar pelo ano: ");
+        IO.println("Livros publicados no ano " + pesquisaAno + ":");
+        IO.println("-------------------");
         for (Livro livro : livros.values()){
-            IO.println("Livro: " + livro.getTitulo());
+            if (pesquisaAno.equals(livro.getAno())) {
+                IO.println("Livro: " + livro.getTitulo());
+            }
         }
     }
 
-    void menu(int opcao){
+    void menu(){
+        int opcao;
 
-        while (opcao != 5) {
-
-            String.format("""
+        do {
+            IO.println("""
                 Menu
                 1 - Cadastrar livro
                 2 - Listar todos os livros
@@ -48,20 +58,20 @@ public class App {
 
             switch (opcao){
 
-                case 1 -> { cadastrar(); }
+                case 1 -> cadastrar();
 
-                case 2 -> { listarTodosLivros(); }
+                case 2 -> listarTodosLivros();
 
-                case 3 -> { listarLivrosPorAno(); }
-
-                case 4 -> {  }
+                case 3 -> listarLivrosPorAno();
+                
+                case 4 -> { }
             }
-        }
+
+        } while (opcao != 5);
     }
 
     static void main(String[] args){
         App app = new App();
-        int opcao = Integer.parseInt(IO.readln("Entre com uma opção: "));
-        app.menu(opcao);
+        app.menu();
     }
 }

@@ -29,5 +29,5 @@ classDiagram
         + void acelerar(int v)
     }
     
-    Carro "1" o-- "1" Motor
+    Carro "1" o-- "1..8" Motor
 ```

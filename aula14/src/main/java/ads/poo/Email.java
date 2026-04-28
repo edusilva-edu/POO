@@ -4,6 +4,17 @@ public class Email {
     private String endereco;
     private String rotulo;
 
+    public Email(String endereco, int idRotulo) {
+        if (validaEndereco(endereco)) {
+            this.endereco = endereco;
+        }
+        switch (idRotulo){
+            case 1 -> this.rotulo = "Pessoal";
+            case 2 -> this.rotulo = "Comercial";
+            default -> {}
+        }
+    }
+
     public String getEndereco() {
         return endereco;
     }

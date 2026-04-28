@@ -7,6 +7,17 @@ public class Telefone {
     private String numero;
     private String rotulo;
 
+    public Telefone(String numero, int idRotulo) {
+        if (validaNumero(numero)) {
+            this.numero = numero;
+        }
+        switch (idRotulo){
+            case 1 -> this.rotulo = "Pessoal";
+            case 2 -> this.rotulo = "Comercial";
+            default -> {}
+        }
+    }
+
     public String getNumero() {
         return numero;
     }
@@ -22,8 +33,8 @@ public class Telefone {
         return rotulo;
     }
 
-    public void setRotulo(int rotulo) {
-        switch (rotulo){
+    public void setRotulo(int idRotulo) {
+        switch (idRotulo){
             case 1 -> this.rotulo = "Pessoal";
             case 2 -> this.rotulo = "Comercial";
             default -> {}

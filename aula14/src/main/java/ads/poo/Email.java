@@ -4,15 +4,11 @@ public class Email {
     private String endereco;
     private String rotulo;
 
-    public Email(String endereco, int idRotulo) {
+    public Email(String endereco, String rotulo) {
         if (validaEndereco(endereco)) {
             this.endereco = endereco;
         }
-        switch (idRotulo){
-            case 1 -> this.rotulo = "Pessoal";
-            case 2 -> this.rotulo = "Comercial";
-            default -> {}
-        }
+        this.rotulo = rotulo;
     }
 
     public String getEndereco() {
@@ -30,12 +26,8 @@ public class Email {
         return rotulo;
     }
 
-    public void setRotulo(int idRotulo) {
-        switch (idRotulo){
-            case 1 -> this.rotulo = "Pessoal";
-            case 2 -> this.rotulo = "Comercial";
-            default -> {}
-        }
+    public void setRotulo(String rotulo) {
+        this.rotulo = rotulo;
     }
 
     public boolean validaEndereco(String email) {

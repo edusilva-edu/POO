@@ -2,14 +2,14 @@ package ads.poo;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Contato {
     private String nome;
     private String sobrenome;
     private LocalDate nascimento;
-    private HashMap<String, Email> emails;
-    private HashMap<String, Telefone> telefones;
+    private ArrayList<Email> emails;
+    private ArrayList<Telefone> telefones;
 
     private static final DateTimeFormatter FORMATO = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -18,18 +18,42 @@ public class Contato {
         this.sobrenome = sobrenome;
         this.nascimento = LocalDate.parse(dataString, FORMATO);
 
-        this.emails = new HashMap<>();
-        this.telefones = new HashMap<>();
+        this.emails = new ArrayList<>();
+        this.telefones = new ArrayList<>();
     }
 
-    public void addEmail(String endereco, int rotulo){
-        Email e = new Email(endereco, rotulo);
-        this.emails.put(endereco, e);
+    public boolean addEmail(String endereco, String rotulo){
+        boolean repetido = false;
+        for(Email e : emails) {
+            if (e.getEndereco().equals(endereco)) {
+               repetido = true;
+            }
+        }
+        if (!repetido) {
+            this.emails.add(new Email(endereco, rotulo));
+            return true;
+        } else return false;
     }
 
-    public void addTelefone(String numero, int rotulo){
-        Telefone n = new Telefone(numero, rotulo);
-        this.telefones.put(numero, n);
+    public boolean addTelefone(String numero, String rotulo){
+        boolean repetido = false;
+        for(Telefone t  : telefones) {
+            if (t.getNumero().equals(numero)) {
+                repetido = true;
+            }
+        }
+        if (!repetido) {
+            this.telefones.add(new Telefone(numero, rotulo));
+            return true;
+        } else return false;
+    }
+
+    public void removeEmail(String endereco){
+        emails.removeIf(e -> e.getEndereco().equals(endereco));
+    }
+
+    public void removeTelefone(String numero){
+        telefones.removeIf(t -> t.getNumero().equals(numero));
     }
 
     @Override

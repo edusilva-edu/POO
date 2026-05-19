@@ -15,6 +15,10 @@ public class Telefone {
         this.dimensao = dimensao;
     }
 
+    public String getModelo() {
+        return modelo;
+    }
+
     @Override
     public String toString() {
         return "Telefone:" + "\n" +

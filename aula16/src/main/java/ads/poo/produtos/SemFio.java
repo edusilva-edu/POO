@@ -22,4 +22,8 @@ public class SemFio extends Telefone{
 
 
     }
+
+    public double getFrequencia() {
+        return frequencia;
+    }
 }

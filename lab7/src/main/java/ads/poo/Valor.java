@@ -1,0 +1,25 @@
+package ads.poo;
+
+public enum Valor {
+    AS(1, "1"),
+    DOIS(2, "2"),
+    TRES(3, "3"),
+    QUATRO(4, "4"),
+    CINCO(5, "5"),
+    SEIS(6, "6"),
+    SETE(7, "7"),
+    OITO(8, "8"),
+    NOVE(9, "9"),
+    DEZ(10, "10"),
+    VALETE(11, "j"),
+    DAMA(12, "q"),
+    REI(13, "k");
+
+    private int valor;
+    private String inicial;
+
+    Valor(int valor, String inicial) {
+        this.valor = valor;
+        this.inicial = inicial;
+    }
+}

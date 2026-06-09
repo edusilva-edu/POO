@@ -3,11 +3,18 @@ package ads.poo;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
+import java.util.ArrayList;
+
 public class Main implements DrawListener {
 
     private Draw draw;
+    private ArrayList<Carta> cartas;
 
     public Main(){
+
+        CartaGrafica cartaTeste = new CartaGrafica(Naipe.OUROS, Valor.DAMA, 120, 120);
+        ArrayList<Carta> cartas = new ArrayList<>();
+        
         this.draw = new Draw();
         this.draw.setTitle("Jogo de cartas");
         this.draw.setCanvasSize(1200, 600);
@@ -21,14 +28,12 @@ public class Main implements DrawListener {
     @Override
     public void mouseClicked(double x, double y) {
 
-        this.draw.picture(x,y,"cartas/1c.png");
         this.draw.show();
     }
 
     static void main() {
 
         Main app = new Main();
-
 
     }
 }

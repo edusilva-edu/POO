@@ -5,16 +5,13 @@ import edu.princeton.cs.algs4.DrawListener;
 
 import java.util.ArrayList;
 
-public class Main implements DrawListener {
+public class Main implements DrawListener{
 
     private Draw draw;
-    private ArrayList<Carta> cartas;
+    private ArrayList<Carta> elemento;
 
     public Main(){
 
-        CartaGrafica cartaTeste = new CartaGrafica(Naipe.OUROS, Valor.DAMA, 120, 120);
-        ArrayList<Carta> cartas = new ArrayList<>();
-        
         this.draw = new Draw();
         this.draw.setTitle("Jogo de cartas");
         this.draw.setCanvasSize(1200, 600);
@@ -28,6 +25,15 @@ public class Main implements DrawListener {
     @Override
     public void mouseClicked(double x, double y) {
 
+//        CartaGrafica c = new CartaGrafica(Naipe.OUROS, Valor.DEZ, x, y);
+//        if (c.clicouDentro(x, y)){
+//            this.draw.picture(x,y,"cartas/fundoa.png");
+//        } else {
+//            c.desenhar(draw);
+//        }
+
+
+//        this.draw.picture(x,y,"cartas/1c.png");
         this.draw.show();
     }
 
